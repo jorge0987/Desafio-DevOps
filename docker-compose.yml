@@ -6,6 +6,12 @@ services:
       dockerfile: ../Dockerfile
     ports:
       - "3333:3333"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3333/health-check"]
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+      start_period: 30s
     networks:
       - solarys_network
     restart: unless-stopped

@@ -10,6 +10,7 @@ COPY . /home/node/
 
 # Etapa de produção
 FROM node:20-alpine
+RUN apk add --no-cache curl
 USER node
 WORKDIR /home/node
 ENV TZ='America/Sao_Paulo'
