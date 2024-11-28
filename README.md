@@ -115,7 +115,7 @@ O trecho abaixo, implementado no docker-compose, inclui uma verificação de sa�
   restart: unless-stopped
 ```
 
-8. Segurança
+7. Segurança
 
 O Nginx está configurado com:
 
