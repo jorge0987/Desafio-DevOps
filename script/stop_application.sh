@@ -11,7 +11,7 @@ if ! command -v docker-compose &> /dev/null; then
 fi
 
 
-docker-compose down
+docker-compose down && docker system prune -f -a
 
 if [ $? -eq 0 ]; then
     echo
